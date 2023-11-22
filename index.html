@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Gráfico</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/tgdwyer/WebCola/WebCola/cola.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <div class="button-container">
+    <label for="fileInput"> <i class="fas fa-clone"> </i> GRAFO</label>
+    <input type="file" id="fileInput" accept=".txt">
+
+    <label for="autoresInput"> <i class="fas fa-user-friends"></i> AUTORES</label>
+    <input type="file" id="autoresInput" accept=".json">
+    <button onclick="enviarArquivo()"><i class="fa fa-share-alt"></i> BUSCAR</button>
+
+    <div id="cardsContainer"> </i></div>
+    <div id="toggle">
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+
+</html>

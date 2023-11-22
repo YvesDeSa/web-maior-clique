@@ -1,0 +1,194 @@
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+  cursor: move;
+}
+
+.link {
+  stroke: #DAE9F8;
+  stroke-width: 7px;
+  stroke-opacity: 1;
+}
+
+.label {
+  fill: #fff;
+  font-weight: 800;
+  font-family: Verdana;
+  font-size: 25px;
+  text-anchor: middle;
+  cursor: move;
+}
+
+body {
+  /* background-color: #191919; */
+  background-image: linear-gradient(to right, #191919 50%, #181818 50%);
+  background-size: 12px 100%;
+
+}
+
+.button-container {
+  text-align: center;
+  /* Alinhar o conteúdo ao centro */
+}
+
+input[type="file"] {
+  display: none;
+  /* Esconder o input de arquivo padrão */
+}
+
+i {
+ margin-right: 3px;
+}
+
+/* Estilo para o botão */
+button {
+  font-family: 'Poppins';
+  background-color: #4991df;
+  /* Cor de fundo */
+  color: #fff;
+  /* Cor do texto */
+  border: none;
+  /* Remover a borda */
+  padding: 10px 20px;
+  /* Espaçamento interno */
+  cursor: pointer;
+  /* Mudar o cursor ao passar o mouse */
+  border-radius: 5px;
+  /* Cantos arredondados */
+  font-size: 16px;
+  /* Tamanho da fonte */
+}
+
+/* Estilizar o rótulo para o input de arquivo */
+label {
+  font-family: 'Poppins';
+  background-color: #4991df;
+  /* Cor de fundo */
+  color: #fff;
+  /* Cor do texto */
+  border: none;
+  /* Remover a borda */
+  padding: 10px 20px;
+  /* Espaçamento interno */
+  cursor: pointer;
+  /* Mudar o cursor ao passar o mouse */
+  border-radius: 5px;
+  /* Cantos arredondados */
+  font-size: 16px;
+  /* Tamanho da fonte */
+}
+
+/* Quando o rótulo é hover, mude a cor de fundo */
+label:hover,
+button:hover {
+  opacity: 0.6;
+}
+
+#cardsContainer {
+  background-color: #252525;
+  border-left: 6px solid #323232;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  overflow-y: auto;
+  display: none;
+}
+
+#cardsContainer img {
+  width: 80%;
+  margin: 15px auto;
+  border-radius: 15px;
+}
+
+.card {
+  position: relative; /* Posição relativa para servir de referência para os filhos posicionados absolutamente */
+  display: inline-block; /* Ou outro display conforme necessário */
+  border-radius: 15px;
+}
+
+.avatar {
+  width: 80%; /* Defina o tamanho do avatar */
+  /* Outras propriedades de estilo conforme necessário */
+}
+
+.label-cards {
+  position: absolute; /* Posicionamento absoluto para sobrepor */
+  bottom: 0; /* Alinhado ao topo do card */
+  left: 0; /* Alinhado à esquerda do card */
+  width: 80%; /* Ocupa a largura total do card */
+  height: 20%; /* Ocupa a altura total do card */
+  background: rgba(100, 100, 100, 0.4);
+  backdrop-filter: blur(27.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+  border-radius: 15px;
+}
+
+h3, p , span {
+  margin: 2px 0; /* Espaçamento vertical entre os elementos */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  overflow: hidden; /* Evita que o texto ultrapasse os limites do elemento */
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+}
+
+.label-cards h3 {
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.2rem;
+
+
+  color: #FFFFFF;
+
+}
+
+.label-cards p {
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #FFFFFF;
+}
+
+span {
+  position: absolute;
+  font-family: 'Poppins';
+  top: 0;
+  left: 0;
+  margin-top: 6%;
+  margin-left: 13%;
+  font-size: 1.8rem;
+  font-style: italic; /* Estilo em itálico */
+  font-weight: 800;
+  color: #B0E0E6; /* Muda a cor do texto, se necessário */
+  padding: 2px 0; /* Espaçamento vertical para o texto */
+}
+
+#toggle {
+  background-color: #323232; /* Cor de fundo do botão */
+  border-radius: 15px 0 0 15px; /* Cantos arredondados */
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente em relação ao viewport */
+  right: 25%; /* Posiciona à esquerda do cardsContainer */
+  transform: translateY(-50%); /* Ajuste fino para centralização vertical */
+  width: 30px; /* Largura do botão */
+  height: 60px; /* Altura do botão */
+  display: flex;
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  visibility: hidden;
+}
+
+#toggle i {
+  color: #555; /* Cor do ícone */
+  font-size: 1.6rem;
+}
